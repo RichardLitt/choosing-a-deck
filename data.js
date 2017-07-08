@@ -97,10 +97,6 @@ module.exports = data = {
         "shadow": "Men"
       },
       {
-        "fellowship": "Gandalf",
-        "shadow": "Orc"
-      },
-      {
         "fellowship": "Gondor",
         "shadow": "Uruk-hai"
       }
@@ -108,10 +104,12 @@ module.exports = data = {
   },
   'Open': {
     'weight': 0.025,
-    decks: () => {
-      var arr = []
-      arr.push(data.Fellowship.decks, data.Towers.decks, data.Return.decks, data.Shadows.decks)
-      return [].concat.apply([], arr);
-    }
+    decks: [
+      {
+        "fellowship": "Gandalf",
+        "shadow": "Orc",
+        "notes": "Contains RotK and Shadows cards"
+      }
+    ]
   }
 }

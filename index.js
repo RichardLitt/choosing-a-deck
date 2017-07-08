@@ -41,9 +41,15 @@ function whoGoesFirst() {
 
 const first = whoGoesFirst()
 
+function openAllDecks() {
+  var arr = data.Open.decks
+  arr.push(data.Fellowship.decks, data.Towers.decks, data.Return.decks, data.Shadows.decks)
+  return [].concat.apply([], arr);
+}
+
 function chooseDeck(block) {
   var Heather, Richard, result
-  var decks = (block == 'Open') ? data['Open'].decks() : data[block].decks
+  var decks = (block == 'Open') ? openAllDecks() : data[block].decks
 
   console.log(`
 +-+-+-+-+ +-+-+-+
@@ -75,15 +81,21 @@ ${colors.magenta('Block:')} ${colors.yellow(block)}
 
   result = random(decks)
   printResult('Richard', decks[result])
-  
+
   console.log('')
 }
 
 function printResult(name, deck) {
   if (name === first) {
     console.log(colors.green(`${name}:`), colors.cyan(deck.fellowship), colors.green('and'), colors.grey(deck.shadow))
+    if (deck.notes) {
+      console.log(`  ${deck.notes}`)
+    }
   } else {
     console.log(colors.red(`${name}:`), colors.cyan(deck.fellowship), colors.red('and'), colors.grey(deck.shadow))
+    if (deck.notes) {
+      console.log(`  ${deck.notes}`)
+    }
   }
 }
 
