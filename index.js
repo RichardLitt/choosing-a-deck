@@ -3,13 +3,23 @@
 const data = require('./data.js')
 const randomw = require('random-weighted')
 const colors = require('colors')
+const _ = require('lodash')
+
+const participants = ['Heather', 'Richard']
+
+// Weighted chance of choosing for your own decks
+const ownDeckWeight = 0.9
 
 function random (arr) {
   return Math.floor(Math.random() * arr.length)
 }
 
-// Automatically choose a block, weighting for fellowship
+const first = whoGoesFirst()
+function whoGoesFirst () {
+  return participants[random(participants)]
+}
 
+// Automatically choose a block using weights
 function chooseBlock () {
   var weights = []
   for (var key in data) {
@@ -34,22 +44,16 @@ function chooseBlock () {
   }
 }
 
-function whoGoesFirst() {
-  var participants = ['Heather', 'Richard']
-  return participants[random(participants)]
-}
-
-const first = whoGoesFirst()
-
-function openAllDecks() {
+// Used for Open matches
+function allDecks () {
   var arr = data.Open.decks
   arr.push(data.Fellowship.decks, data.Towers.decks, data.Return.decks, data.Shadows.decks)
-  return [].concat.apply([], arr);
+  return [].concat.apply([], arr)
 }
 
-function chooseDeck(block) {
-  var Heather, Richard, result
-  var decks = (block == 'Open') ? openAllDecks() : data[block].decks
+function chooseDeck (block) {
+  var result
+  var decks = (block === 'Open') ? allDecks() : data[block].decks
 
   console.log(`
 +-+-+-+-+ +-+-+-+
@@ -61,31 +65,23 @@ ${colors.magenta('Block:')} ${colors.yellow(block)}
   `)
 
   // Weight based on ownership
-  decks.forEach(function (d,i) {
-    if (d.owner == 'Heather') {
-      // Possibility of you getting your own deck
-      // TODO Change for multiple decks
-      if (randomw([0.1, 0.9]) != 0) {
-        Heather = d
-        printResult('Heather', d)
-        decks.splice(i, 1)
-      }
+  _.forEach(participants, (participant) => {
+    var ownDecks = _.filter(decks, {'owner': participant})
+    if (randomw([1 - ownDeckWeight, ownDeckWeight]) !== 0 && ownDecks.length !== 0) {
+      result = ownDecks[random(ownDecks)]
+      printResult(participant, result)
+      decks.splice(_.findIndex(decks, result), 1)
+    } else {
+      result = random(decks)
+      printResult(participant, decks[result])
+      decks.splice(result, 1)
     }
   })
-
-  if (!Heather) {
-    result = random(decks)
-    printResult('Heather', decks[result])
-    decks.splice(result, 1)
-  }
-
-  result = random(decks)
-  printResult('Richard', decks[result])
 
   console.log('')
 }
 
-function printResult(name, deck) {
+function printResult (name, deck) {
   if (name === first) {
     console.log(colors.green(`${name}:`), colors.cyan(deck.fellowship), colors.green('and'), colors.grey(deck.shadow))
     if (deck.notes) {

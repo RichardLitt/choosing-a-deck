@@ -18,7 +18,9 @@
   "license": "MIT",
   "dependencies": {
     "colors": "^1.1.2",
-    "random-weighted": "^1.0.0"
+    "lodash": "^4.17.4",
+    "random-weighted": "^1.0.0",
+    "standard": "^10.0.2"
   },
   "coordinates": [
     45.5192031,
