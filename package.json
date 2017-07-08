@@ -1,0 +1,16 @@
+{
+  "name": "choose-a-deck",
+  "version": "1.0.0",
+  "description": "How to choose a Lord of the Rings TCG deck to play with",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["cards", "lotr", "tcg", "card", "deck"],
+  "author": "Richard Littauer <richard.littauer@gmail.com> (http://burntfen.com)",
+  "license": "MIT",
+  "dependencies": {
+    "random-weighted": "^1.0.0"
+  }
+}
