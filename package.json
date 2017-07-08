@@ -1,6 +1,6 @@
 {
   "name": "choose-a-deck",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "How to choose a Lord of the Rings TCG deck to play with",
   "main": "index.js",
   "bin": "index.js",
@@ -23,7 +23,7 @@
     "standard": "^10.0.2"
   },
   "coordinates": [
-    45.5192031,
-    -73.57895479999999
+    45.5191775,
+    -73.5789284
   ]
 }
