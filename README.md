@@ -5,7 +5,7 @@
 ## Install
 
 ```js
-npm i lotr-tcg -g
+npm i choose-a-deck -g
 ```
 
 ## Usage
