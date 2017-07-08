@@ -1,114 +1,134 @@
-module.exports = data = {
-  "Fellowship": {
+module.exports = {
+  'Fellowship': {
     'weight': 0.9,
     'decks': [
       {
-        "fellowship": "Gandalf",
-        "shadow": "Nazgul"
+        'fellowship': 'Gandalf',
+        'shadow': 'Nazgul',
+        'owner': 'Richard'
       },
       {
-        "fellowship": "Aragorn avoidance",
-        "shadow": "Moria archer"
+        'fellowship': 'Aragorn avoidance',
+        'shadow': 'Moria swarms and archer',
+        'owner': 'Richard'
       },
       {
-        "fellowship": "Dwarf",
-        "shadow": "Uruk",
-        "notes": "Dad's deck"
+        'fellowship': 'Dwarf',
+        'shadow': 'Isengard',
+        'owner': 'Richard',
+        'notes': "Dad's deck"
       },
       {
-        "fellowship": "Dwarf",
-        "shadow": "Uruk // Sauron",
-        "notes": "Mill deck"
+        'fellowship': 'Dwarf',
+        'shadow': 'Isengard and Sauron',
+        'owner': 'Richard',
+        'notes': 'Annoyance and mill deck'
       },
       {
-        "fellowship": "Gandalf and non-unique fellowship",
-        "shadow": "Isengard weather"
+        'fellowship': 'Gandalf and non-unique fellowship',
+        'shadow': 'Isengard weather',
+        'owner': 'Richard'
       },
       {
-        "fellowship": "Gandalf ally",
-        "shadow": "Isengard"
+        'fellowship': 'Gandalf ally',
+        'shadow': 'Isengard',
+        'owner': 'Richard'
       },
       {
-        "fellowship": "Mixed",
-        "shadow": "Nazgul",
-        "owner": "Heather"
+        'fellowship': 'Mixed',
+        'shadow': 'Nazgul',
+        'owner': 'Heather'
       }
       // {
-      //   "fellowship": "Boromir and hobbit",
-      //   "shadow": "Moria swarms"
+      //   'fellowship': 'Boromir and hobbit',
+      //   'shadow': 'Moria swarms',
+      // 'owner': 'Richard'
       // },
     ]
   },
-  "Towers": {
+  'Towers': {
     'weight': 0.025,
     'decks': [
       {
-        "fellowship": "Dwarf/elf",
-        "shadow": "Sarumon Warg"
+        'fellowship': 'Dwarf/elf',
+        'shadow': 'Sarumon Warg',
+        'owner': 'Richard'
       },
       {
-        "fellowship": "Ent",
-        "shadow": "Dunland"
+        'fellowship': 'Ent',
+        'shadow': 'Dunland',
+        'owner': 'Richard'
       },
       {
-        "fellowship": "Gandalf",
-        "shadow": "Dunland"
+        'fellowship': 'Gandalf',
+        'shadow': 'Dunland',
+        'owner': 'Richard'
       },
       {
-        "fellowship": "Rohan and Gollum",
-        "shadow": "Random"
+        'fellowship': 'Rohan and Gollum',
+        'shadow': 'Random',
+        'owner': 'Richard'
       },
       {
-        "fellowship": "Rohan",
-        "shadow": "Easterling"
+        'fellowship': 'Rohan',
+        'shadow': 'Easterling',
+        'owner': 'Richard'
       },
       {
-        "fellowship": "Gondor ranger",
-        "shadow": "Machine Uruk"
+        'fellowship': 'Gondor ranger',
+        'shadow': 'Machine Uruk',
+        'owner': 'Richard'
       }
     ]
   },
-  "Return": {
+  'Return': {
     'weight': 0.025,
     'decks': [
       {
-        "fellowship": "Rohan",
-        "shadow": "Sauron"
+        'fellowship': 'Rohan',
+        'shadow': 'Sauron',
+        'owner': 'Richard'
       },
       {
-        "fellowship": "Rohan",
-        "shadow": "Easterling"
+        'fellowship': 'Rohan',
+        'shadow': 'Easterling',
+        'owner': 'Richard'
       }
     ]
   },
-  "Shadows": {
+  'Shadows': {
     'weight': 0.025,
     'decks': [
       {
-        "fellowship": "Faramir",
-        "shadow": "Nazgul"
+        'fellowship': 'Faramir',
+        'shadow': 'Nazgul',
+        'owner': 'Richard'
       },
       {
-        "fellowship": "Elf",
-        "shadow": "Uruk"
+        'fellowship': 'Elf',
+        'shadow': 'Uruk',
+        'owner': 'Richard'
       },
       {
-        "fellowship": "Aragorn Rohirrim",
-        "shadow": "Men"
+        'fellowship': 'Aragorn Rohirrim',
+        'shadow': 'Men',
+        'owner': 'Richard'
       },
       {
-        "fellowship": "Gondor",
-        "shadow": "Uruk-hai"
+        'fellowship': 'Gondor',
+        'shadow': 'Uruk-hai',
+        'owner': 'Richard'
       }
     ]
   },
   'Open': {
     'weight': 0.025,
-    decks: [
+    'decks': [
       {
-        "fellowship": "Gandalf",
-        "shadow": "Orc",
-        "notes": "Contains RotK and Shadows cards"
+        'fellowship': 'Gandalf',
+        'shadow': 'Orc',
+        'notes': 'Contains RotK and Shadows cards',
+        'owner': 'Richard'
       }
     ]
   }
