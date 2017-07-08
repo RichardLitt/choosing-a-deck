@@ -17,6 +17,7 @@
   "author": "Richard Littauer <richard.littauer@gmail.com> (http://burntfen.com)",
   "license": "MIT",
   "dependencies": {
+    "colors": "^1.1.2",
     "random-weighted": "^1.0.0"
   },
   "coordinates": [

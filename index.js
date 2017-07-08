@@ -2,6 +2,7 @@
 
 const data = require('./data.js')
 const randomw = require('random-weighted')
+const colors = require('colors')
 
 function random (arr) {
   return Math.floor(Math.random() * arr.length)
@@ -33,11 +34,24 @@ function chooseBlock () {
   }
 }
 
+function whoGoesFirst() {
+  var participants = ['Heather', 'Richard']
+  return participants[random(participants)]
+}
+
+const first = whoGoesFirst()
+
 function chooseDeck(block) {
   var Heather, Richard, result
   var decks = (block == 'Open') ? data['Open'].decks() : data[block].decks
 
-  console.log(`Block: ${block}
+  console.log(`
++-+-+-+-+ +-+-+-+
+|L|o|t|R| |T|C|G|
++-+-+-+-+ +-+-+-+`.blue)
+
+  console.log(`
+${colors.magenta('Block:')} ${colors.yellow(block)}
   `)
 
   // Weight based on ownership
@@ -61,10 +75,16 @@ function chooseDeck(block) {
 
   result = random(decks)
   printResult('Richard', decks[result])
+  
+  console.log('')
 }
 
 function printResult(name, deck) {
-  console.log(`${name}: ${deck.fellowship} and ${deck.shadow}`)
+  if (name === first) {
+    console.log(colors.green(`${name}:`), colors.cyan(deck.fellowship), colors.green('and'), colors.grey(deck.shadow))
+  } else {
+    console.log(colors.red(`${name}:`), colors.cyan(deck.fellowship), colors.red('and'), colors.grey(deck.shadow))
+  }
 }
 
 chooseDeck(chooseBlock())
