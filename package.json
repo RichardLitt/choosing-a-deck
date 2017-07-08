@@ -1,6 +1,6 @@
 {
   "name": "choose-a-deck",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "How to choose a Lord of the Rings TCG deck to play with",
   "main": "index.js",
   "bin": "index.js",
