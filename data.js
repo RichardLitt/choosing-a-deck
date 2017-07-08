@@ -78,6 +78,11 @@ module.exports = {
         'fellowship': 'Gondor ranger',
         'shadow': 'Machine Uruk',
         'owner': 'Richard'
+      },
+      {
+        'fellowship': 'Rohan',
+        'shadow': 'Isengard',
+        'owner': 'Heather'
       }
     ]
   },
@@ -100,18 +105,8 @@ module.exports = {
     'weight': 0.025,
     'decks': [
       {
-        'fellowship': 'Faramir',
-        'shadow': 'Nazgul',
-        'owner': 'Richard'
-      },
-      {
         'fellowship': 'Elf',
         'shadow': 'Uruk',
-        'owner': 'Richard'
-      },
-      {
-        'fellowship': 'Aragorn Rohirrim',
-        'shadow': 'Men',
         'owner': 'Richard'
       },
       {
@@ -124,6 +119,16 @@ module.exports = {
   'Open': {
     'weight': 0.025,
     'decks': [
+      {
+        'fellowship': 'Aragorn Rohirrim',
+        'shadow': 'Men',
+        'owner': 'Richard'
+      },
+      {
+        'fellowship': 'Gondor',
+        'shadow': 'Nazgul',
+        'owner': 'Richard'
+      },
       {
         'fellowship': 'Gandalf',
         'shadow': 'Orc',
