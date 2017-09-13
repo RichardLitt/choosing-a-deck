@@ -1,5 +1,7 @@
 # Choosing a Deck
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/RichardLitt/choosing-a-deck.svg)](https://greenkeeper.io/)
+
 > How to choose a Lord of the Rings TCG deck to play with
 
 ## Install
